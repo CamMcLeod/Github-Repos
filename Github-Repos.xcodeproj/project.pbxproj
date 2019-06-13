@@ -15,6 +15,7 @@
 		6208E5DA22B2E210004BB48F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6208E5D922B2E210004BB48F /* main.m */; };
 		6208E5E422B2E210004BB48F /* Github_ReposTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6208E5E322B2E210004BB48F /* Github_ReposTests.m */; };
 		6208E5EF22B2E210004BB48F /* Github_ReposUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6208E5EE22B2E210004BB48F /* Github_ReposUITests.m */; };
+		6208E60422B3047A004BB48F /* Repo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6208E60322B3047A004BB48F /* Repo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		6208E5EA22B2E210004BB48F /* Github-ReposUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Github-ReposUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6208E5EE22B2E210004BB48F /* Github_ReposUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Github_ReposUITests.m; sourceTree = "<group>"; };
 		6208E5F022B2E210004BB48F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6208E60222B3047A004BB48F /* Repo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Repo.h; sourceTree = "<group>"; };
+		6208E60322B3047A004BB48F /* Repo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Repo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				6208E5CB22B2E20E004BB48F /* AppDelegate.m */,
 				6208E5CD22B2E20E004BB48F /* ViewController.h */,
 				6208E5CE22B2E20E004BB48F /* ViewController.m */,
+				6208E60222B3047A004BB48F /* Repo.h */,
+				6208E60322B3047A004BB48F /* Repo.m */,
 				6208E5D022B2E20E004BB48F /* Main.storyboard */,
 				6208E5D322B2E210004BB48F /* Assets.xcassets */,
 				6208E5D522B2E210004BB48F /* LaunchScreen.storyboard */,
@@ -265,6 +270,7 @@
 				6208E5CF22B2E20E004BB48F /* ViewController.m in Sources */,
 				6208E5DA22B2E210004BB48F /* main.m in Sources */,
 				6208E5CC22B2E20E004BB48F /* AppDelegate.m in Sources */,
+				6208E60422B3047A004BB48F /* Repo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
