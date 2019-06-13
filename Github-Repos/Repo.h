@@ -12,7 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Repo : NSObject
 
-@property NSMutableArray *repoNames;
+@property NSString *repoName;
+
+- (instancetype)initWithDict:(NSDictionary *)repoDict;
 
 @end
 

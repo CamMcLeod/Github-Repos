@@ -10,4 +10,13 @@
 
 @implementation Repo
 
+- (instancetype)initWithDict:(NSDictionary *)repoDict {
+    
+    self = [super init];
+    if (self) {
+        _repoName = repoDict[@"name"];
+    }
+    return self;
+}
+
 @end

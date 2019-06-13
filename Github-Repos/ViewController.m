@@ -13,7 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic) NSMutableArray *repoNames;
+@property (nonatomic) NSMutableArray *allRepos;
 
 
 @end
@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.repoNames = [[NSMutableArray alloc] init];
+    self.allRepos = [[NSMutableArray alloc] init];
     
     
     NSURL *url = [NSURL URLWithString:@"https://api.github.com/users/CamMcLeod/repos"]; // 1
@@ -52,10 +52,10 @@
         // If we reach this point, we have successfully retrieved the JSON from the API
         for (NSDictionary *repoDict in repos) { // 4
             
-            NSString *repoName = repoDict[@"name"];
-            NSLog(@"repo: %@", repoName);
-            [self.repoNames addObject: repoName];
-            NSLog(@"%@", [self.repoNames lastObject]);
+            Repo *repo = [[Repo alloc] initWithDict:repoDict];
+            NSLog(@"repo: %@", repo.repoName);
+            [self.allRepos addObject: repo];
+            NSLog(@"%@", [[self.allRepos lastObject] repoName]);
             
             
         }
@@ -81,7 +81,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [self.repoNames count];
+    return [self.allRepos count];
     
 }
 
@@ -89,9 +89,9 @@
      
      UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"viewCell" forIndexPath:indexPath];
     
-    NSString *cellName = self.repoNames[indexPath.row];
-    cell.textLabel.text = @"Name:";
-    cell.detailTextLabel.text = cellName;
+    Repo *repo = self.allRepos[indexPath.row];
+     cell.textLabel.text = @"Repo name:";
+    cell.detailTextLabel.text = repo.repoName;
      
      return cell;
  }
